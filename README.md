@@ -34,7 +34,8 @@ rails db:migrate
 To Check CRUD Operations navigate to app/controllers/products_controller.rb
 
 class ProductsController < ApplicationController
- 
+
+'''
   # GET method to get all products from database
   def index
     @products = Product.all
@@ -90,6 +91,8 @@ class ProductsController < ApplicationController
       render :destroy
     end
   end
+  
+  '''
  
   # we used strong parameters for the validation of params
   def product_params
