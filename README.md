@@ -2,14 +2,16 @@
 
 Required Installations:
 
-  *Ruby
+* Ruby
 
-  *Ruby on Rails Framwork. 
-    From terminal/cmd:
+* Ruby on Rails Framwork. 
+  
+  From terminal/cmd:
 ```
 gem install rails
 ```
 * MYSQL Server
+
 Project Configurations:
 ```
     Clone 'rails-crud' project to 'your destination'
@@ -17,26 +19,25 @@ Project Configurations:
 cd 'your destination'
 git clone https://github.com/henokgelaneh7217/RubyONRailsCRUD.git
 ```
-Install bundle
+* Install bundle
 ```
 cd 'rails-crud'
 bundle install
 ```
-Change username/password in 'RubyONRailsCRUD/config/database.yml' to match your mysql database username/password:
+* Change username/password in 'RubyONRailsCRUD/config/database.yml' to match your mysql database username/password:
 ```
 username: 'your username'
 password: 'your password'
 ```
-Run migrations for the project to build its tables on sakila database:
+* Run migrations for the project to build its tables on sakila database:
 ```
 rails db:migrate
 ```
 To Check CRUD Operations navigate to app/controllers/products_controller.rb
 
-class ProductsController < ApplicationController
 
 
-GET method to get all products from database
+* GET method to get all products from database
 
 ```
   def index
@@ -44,7 +45,7 @@ GET method to get all products from database
   end
  ```
  
- GET method to get a product by id
+ * GET method to get a product by id
  ```
   def show
     @product = Product.find(params[:id])
@@ -56,7 +57,7 @@ GET method to get all products from database
   end
   ```
  
-  POST method for processing form data
+  * POST method for processing form data
   ```
   def create
     @product = Product.new(product_params)
@@ -70,13 +71,13 @@ GET method to get all products from database
   end
   ```
  
-  GET method for editing a product based on id
+*  GET method for editing a product based on id
   ```
   def edit
     @product = Product.find(params[:id])
   end
  ```
- PUT method for updating in database a product based on id
+ * PUT method for updating in database a product based on id
 ```
   def update
     @product = Product.find(params[:id])
@@ -90,7 +91,7 @@ GET method to get all products from database
   end
   ```
  
- DELETE method for deleting a product from database based on id
+ * DELETE method for deleting a product from database based on id
  
  ```
   def destroy
@@ -106,7 +107,7 @@ GET method to get all products from database
   
   ```
  
-  # we used strong parameters for the validation of params
+  * we used strong parameters for the validation of params
   
   ```
   def product_params
