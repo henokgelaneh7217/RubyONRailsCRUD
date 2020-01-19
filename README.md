@@ -35,13 +35,17 @@ To Check CRUD Operations navigate to app/controllers/products_controller.rb
 
 class ProductsController < ApplicationController
 
-'''
-  # GET method to get all products from database
+
+GET method to get all products from database
+
+```
   def index
     @products = Product.all
   end
+ ```
  
-  # GET method to get a product by id
+ GET method to get a product by id
+ ```
   def show
     @product = Product.find(params[:id])
   end
@@ -50,8 +54,10 @@ class ProductsController < ApplicationController
   def new
     @product = Product.new
   end
+  ```
  
-  # POST method for processing form data
+  POST method for processing form data
+  ```
   def create
     @product = Product.new(product_params)
     if @product.save
@@ -62,13 +68,16 @@ class ProductsController < ApplicationController
       render :new
     end
   end
+  ```
  
-   # GET method for editing a product based on id
+  GET method for editing a product based on id
+  ```
   def edit
     @product = Product.find(params[:id])
   end
- 
-  # PUT method for updating in database a product based on id
+ ```
+ PUT method for updating in database a product based on id
+```
   def update
     @product = Product.find(params[:id])
     if @product.update_attributes(product_params)
@@ -79,8 +88,11 @@ class ProductsController < ApplicationController
       render :edit
     end
   end
+  ```
  
-  # DELETE method for deleting a product from database based on id
+ DELETE method for deleting a product from database based on id
+ 
+ ```
   def destroy
     @product = Product.find(params[:id])
     if @product.delete
@@ -92,11 +104,14 @@ class ProductsController < ApplicationController
     end
   end
   
-  '''
+  ```
  
   # we used strong parameters for the validation of params
+  
+  ```
   def product_params
     params.require(:product).permit(:name, :price, :old_price, :short_description, :full_description)
   end
  
 end
+```
