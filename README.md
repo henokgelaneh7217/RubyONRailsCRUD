@@ -2,35 +2,35 @@
 
 Required Installations:
 
-    Ruby
+  *Ruby
 
-    Ruby on Rails Framwork. From terminal/cmd:
-
+  *Ruby on Rails Framwork. 
+    From terminal/cmd:
+```
 gem install rails
-
-    MYSQL Server
-
+```
+* MYSQL Server
 Project Configurations:
-
+```
     Clone 'rails-crud' project to 'your destination'
 
 cd 'your destination'
 git clone https://github.com/henokgelaneh7217/RubyONRailsCRUD.git
-
-    Install bundle
-
+```
+Install bundle
+```
 cd 'rails-crud'
 bundle install
-
-    Change username/password in 'RubyONRailsCRUD/config/database.yml' to match your mysql database username/password:
-
+```
+Change username/password in 'RubyONRailsCRUD/config/database.yml' to match your mysql database username/password:
+```
 username: 'your username'
 password: 'your password'
-
-    Run migrations for the project to build its tables on sakila database:
-
+```
+Run migrations for the project to build its tables on sakila database:
+```
 rails db:migrate
-
+```
 To Check CRUD Operations navigate to app/controllers/products_controller.rb
 
 class ProductsController < ApplicationController
