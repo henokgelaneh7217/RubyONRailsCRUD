@@ -109,12 +109,4 @@ To Check CRUD Operations navigate to app/controllers/products_controller.rb
   
   ```
  
-  * we used strong parameters for the validation of params
   
-  ```
-  def product_params
-    params.require(:product).permit(:name, :price, :old_price, :short_description, :full_description)
-  end
- 
-end
-```
